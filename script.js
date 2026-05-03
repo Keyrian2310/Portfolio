@@ -47,3 +47,11 @@ window.onclick = function(e){
         modal.style.display = "none";
     }
 }
+function scrollSlider(direction){
+    const slider = document.getElementById("projectsSlider");
+
+    slider.scrollBy({
+        left: direction * 320,
+        behavior: "smooth"
+    });
+}
