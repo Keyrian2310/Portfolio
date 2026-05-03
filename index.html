@@ -273,28 +273,7 @@
     <div class="featured-projects-grid">
 
         <!-- PROJET 1 -->
-        <div class="featured-project-card"
-onclick="openModal(
-'ADCPG 03',
-`Contexte
-Stage WordPress complet.
-
-Objectifs
-Créer un site WordPress de A à Z.
-
-Points de réalisation
-- thème enfant PHP
-- menu responsive
-- module de don
-- FTP FileZilla`,
-['WordPress','PHP','JS','FTP'],
-[
-'assets/UncpgAcceuil.png',
-'assets/UncpgFooter.png',
-'assets/UncpgEspace.png',
-'assets/UncpgAdherent.png'
-]
-)">
+        <div class="featured-project-card" onclick="openModal('adcpg03')">
 
     <img src="assets/UNCPG03.png" class="project-img">
     <div class="project-overlay"></div>
@@ -308,8 +287,7 @@ Points de réalisation
 </div>
 
         <!-- PROJET 2 -->
-        <div class="featured-project-card"
-        onclick="openModal('Musique','Vue.js + Java + MySQL',['Vue.js','Java','MySQL','GitHub'])">
+        <div class="featured-project-card" onclick="openModal('vibz')">
 
             <img src="assets/VIBZ.png" class="project-img">
             <div class="project-overlay"></div>
@@ -317,19 +295,18 @@ Points de réalisation
             <div class="featured-project-content">
                 <span class="project-type">Fullstack</span>
                 <h3>Plateforme musique</h3>
-                <p>Ste d'écoute de musique.</p>
+                <p>Site d'écoute de musique.</p>
             </div>
         </div>
 
         <!-- PROJET 3 -->
-        <div class="featured-project-card"
-        onclick="openModal('Sportifs','C# + SQL',['C#','SQL','WinForms'])">
+        <div class="featured-project-card" onclick="openModal('sport')">
 
             <img src="assets/Sport.png" class="project-img">
             <div class="project-overlay"></div>
 
             <div class="featured-project-content">
-                <span class="project-type">Desktop</span>
+                <span class="project-type">Application</span>
                 <h3>Gestion sportifs</h3>
                 <p>Application C# avec base de données.</p>
             </div>
@@ -358,31 +335,37 @@ Points de réalisation
     <div class="projects-slider" id="projectsSlider">
 
         <div class="mini-project-card">
+             <img src="assets/glpi.png" class="mini-project-img">
             <h3>GLPI</h3>
             <p>Déploiement et administration de GLPI pour la gestion du parc informatique et des tickets utilisateurs.</p>
         </div>
 
         <div class="mini-project-card">
+             <img src="assets/Jeux.png" class="mini-project-img">
             <h3>Application Jeux</h3>
             <p>Application C# regroupant Morpion, Pendu et Mastermind avec gestion des événements et interfaces.</p>
         </div>
 
         <div class="mini-project-card">
+             <img src="assets/Calcul.png" class="mini-project-img">
             <h3>Application Calcul</h3>
             <p>Application éducative en C# pour apprendre les opérations de base aux élèves du primaire.</p>
         </div>
 
         <div class="mini-project-card">
+             <img src="assets/CanardConnecter.png" class="mini-project-img">
             <h3>Journal “Le Canard Connecté”</h3>
             <p>Rédaction d'articles et veille technologique hebdomadaire sur les innovations numériques.</p>
         </div>
 
         <div class="mini-project-card">
+             <img src="assets/ZenGarden.png" class="mini-project-img">
             <h3>CSS Zen Garden</h3>
             <p>Création d'un design CSS complet sans modifier le HTML.</p>
         </div>
 
         <div class="mini-project-card">
+             <img src="assets/Pub.png" class="mini-project-img">
             <h3>Site HTML Pub</h3>
             <p>Site one-page interactif avec présentation d'un produit fictif.</p>
         </div>
@@ -395,7 +378,7 @@ Points de réalisation
 </section>
 
 <div id="projectModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" id="modalContent">
         <span class="close-btn" onclick="closeModal()">×</span>
 
         <h2 id="modalTitle">Titre</h2>
@@ -420,16 +403,26 @@ Points de réalisation
 
         <div class="footer-right">
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kly.sio2310@gmail.com" class="footer-icon">✉️</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kly.sio2310@gmail.com" class="footer-icon">
+        <img src="assets/mail.png" alt="Mail">
+    </a>
 
-            <a href="https://www.linkedin.com/in/keyrian-ly" target="_blank" class="footer-icon"></a>
+    <a href="https://www.linkedin.com/in/keyrian-ly"
+       target="_blank"
+       class="footer-icon">
+        <img src="assets/linkedin.png" alt="LinkedIn">
+    </a>
 
-        </div>
+    <a href="https://github.com/Keyrian2310"
+       target="_blank"
+       class="footer-icon">
+        <img src="assets/gitHub.png" alt="GitHub">
+    </a>
 
-    </div>
-
+</div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
