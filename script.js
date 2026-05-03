@@ -21,19 +21,30 @@ cards.forEach(card => {
         card.style.setProperty('--y', `${y}px`);
     });
 });
-function openModal(title, desc, tags) {
+function openModal(title, desc, tags, images) {
+
     document.getElementById("projectModal").style.display = "flex";
 
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalDesc").innerText = desc;
 
+    // tags
     const container = document.getElementById("modalTags");
     container.innerHTML = "";
-
     tags.forEach(tag => {
         const span = document.createElement("span");
         span.innerText = tag;
         container.appendChild(span);
+    });
+
+    // images dynamiques (IMPORTANT)
+    const imgContainer = document.querySelector(".modal-right");
+    imgContainer.innerHTML = "";
+
+    images.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        imgContainer.appendChild(img);
     });
 }
 
@@ -47,7 +58,7 @@ window.onclick = function(e){
         modal.style.display = "none";
     }
 }
-function scrollSlider(direction){
+function scrollProjects(direction){
     const slider = document.getElementById("projectsSlider");
 
     slider.scrollBy({
@@ -55,3 +66,4 @@ function scrollSlider(direction){
         behavior: "smooth"
     });
 }
+

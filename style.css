@@ -16,6 +16,8 @@ html{
 }
 
 body{
+    min-height: 100vh;
+    display: block;
     margin:0;
     padding-bottom:50px;
     font-family:'Space Grotesk', sans-serif;
@@ -29,6 +31,11 @@ body{
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
+.footer{
+    margin-top: auto;
+}
+
 body::before{
     content:"";
     position:fixed;
@@ -45,6 +52,7 @@ body::before{
     animation: moveGlow 12s infinite linear;
     pointer-events:none;
 }
+
 
 @keyframes moveGlow{
     0%{ transform:translate(0,0); }
@@ -906,21 +914,26 @@ h1 {
    SLIDER AUTRES PROJETS
 ========================= */
 
-.projects-slider{
-    display:flex;
-    gap:20px;
+.projects-slider {
+    display: flex;
+    gap: 20px;
 
-    overflow-x:auto;
-    scroll-behavior:smooth;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 
-    padding:20px 5px;
-    margin-top:40px;
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 20px;
+    margin: 40px auto;
+
+    justify-content: flex-start;
 }
 
-/* scrollbar propre */
-.projects-slider::-webkit-scrollbar{
-    height:8px;
+.projects-slider::-webkit-scrollbar {
+    display: none;
 }
+
 
 .projects-slider::-webkit-scrollbar-thumb{
     background:rgba(124,92,255,0.4);
@@ -980,6 +993,19 @@ h1 {
     z-index:9999;
 }
 
+.modal-layout{
+    display:flex;
+    gap:30px;
+}
+
+.modal-right{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-height:500px;
+    overflow-y:auto;
+}
+
 .modal-content{
     background:linear-gradient(135deg, rgba(10,10,14,0.95), rgba(18,18,26,0.9));
     padding:40px;
@@ -1029,26 +1055,15 @@ h1 {
     transform:scale(1.05);
     filter:brightness(1);
 }
-/* cacher la barre de scroll */
-.projects-slider{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;      /* Firefox */
-    -ms-overflow-style:none;   /* IE/Edge */
-}
-
-.projects-slider::-webkit-scrollbar{
-    display:none;              /* Chrome */
-}
 
 /* wrapper */
 .slider-wrapper{
+    max-width:1200px;
+    margin:0 auto;
     position:relative;
     display:flex;
     align-items:center;
+    justify-content:center;
 }
 
 /* flèches */
@@ -1087,4 +1102,95 @@ h1 {
 
 .slider-btn.right{
     right:-10px;
+}
+
+.other-projects-section{
+    max-width:1200px;
+    margin:100px auto;
+    padding:20px;
+}
+
+.contact-title{
+    text-align:center;
+    margin:80px 0 40px;
+
+    font-size:3rem;
+    font-weight:900;
+    letter-spacing:2px;
+
+    color:white;
+}
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+    position:relative;
+    margin-top:auto;
+    padding:30px 10%;
+    text-align:center;
+}
+
+.footer::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:60%;
+    height:2px;
+
+    background:linear-gradient(90deg, transparent, #4a59ff, transparent);
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-left h3{
+    margin:0;
+    font-size:1.2rem;
+    font-weight:900;
+}
+
+.footer-left p{
+    margin:5px 0 0;
+    color:#b6bdd1;
+    font-size:0.85rem;
+}
+
+/* icônes */
+.footer-right{
+    display:flex;
+    gap:15px;
+}
+
+.footer-icon{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(124,92,255,0.2);
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:900;
+
+    transition:0.3s ease;
+}
+
+.footer-icon:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 15px rgba(124,92,255,0.3);
+    border-color:rgba(124,92,255,0.4);
 }

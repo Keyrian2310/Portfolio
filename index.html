@@ -15,6 +15,7 @@
             <a href="#home">Accueil</a>
             <a href="#formation">Formation</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projets</a>
            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kly.sio2310@gmail.com" target="_blank" class="btn-nav">Contact
 </a>
         </nav>
@@ -223,19 +224,15 @@
 
     <div class="projects-grid">
 
-        <!-- STAGE 1 -->
         <div class="project-card">
             <div class="project-top">
                 <h3>ADCPG 03</h3>
                 <span class="project-date">Fév 2026 → Avr 2026</span>
             </div>
-
             <p class="project-location">Hyds, 03600</p>
-
             <p class="project-desc">
                 Développement d'un site WordPress complet de A à Z.
             </p>
-
             <ul class="project-list">
                 <li>Création d'un thème enfant PHP personnalisé</li>
                 <li>Navigation responsive avec menu burger</li>
@@ -244,112 +241,102 @@
             </ul>
         </div>
 
-        <!-- STAGE 2 -->
         <div class="project-card">
             <div class="project-top">
                 <h3>Tyche Informatique</h3>
                 <span class="project-date">Mai 2025 → Juin 2025</span>
             </div>
-
             <p class="project-location">Clermont-Ferrand</p>
-
             <p class="project-desc">
-                Développement de fonctionnalités sur des applications et projets web.
+                Développement de fonctionnalités sur des applications web.
             </p>
-
             <ul class="project-list">
                 <li>Application agenda en C#</li>
-                <li>Site Occas'Auto avec base de données SQL</li>
-                <li>Travail en équipe selon des normes de codage professionnelles</li>
+                <li>Site Occas'Auto avec SQL</li>
+                <li>Travail en équipe</li>
             </ul>
         </div>
 
     </div>
+
+</section>
 <section class="featured-projects-section" id="projects">
 
     <div class="skills-header">
         <p class="badge-tech">PROJETS</p>
         <h2>Mes projets principaux</h2>
         <p class="skills-subtitle">
-            Projets réalisés en formation et en autonomie pour développer mes compétences en développement web et logiciel.
+            Projets réalisés durant ma formation.
         </p>
     </div>
 
     <div class="featured-projects-grid">
 
-    <!-- PROJET 1 -->
-    <div class="featured-project-card"
-    onclick="openModal(
-    'ADCPG 03',
-    'Stage WordPress complet réalisé en deuxième année. Création d’un thème enfant PHP, module de don JS et déploiement FTP.',
-    ['WordPress','PHP','JavaScript','FTP']
-    )">
-        <img src="assets/UNCPG03.png" class="project-img">
-        <div class="project-overlay"></div>
+        <!-- PROJET 1 -->
+        <div class="featured-project-card"
+onclick="openModal(
+'ADCPG 03',
+`Contexte
+Stage WordPress complet.
 
-        <div class="featured-project-content">
-            <span class="project-type">Stage - Développement Web</span>
-            <h3>ADCPG 03</h3>
-            <p>Stage WordPress complet de A à Z avec du php.</p>
+Objectifs
+Créer un site WordPress de A à Z.
 
-            <div class="skill-tags">
-                <span>WordPress</span>
-                <span>PHP</span>
-                <span>JS</span>
-                <span>FTP</span>
-            </div>
-        </div>
-    </div>
+Points de réalisation
+- thème enfant PHP
+- menu responsive
+- module de don
+- FTP FileZilla`,
+['WordPress','PHP','JS','FTP'],
+[
+'assets/UncpgAcceuil.png',
+'assets/UncpgFooter.png',
+'assets/UncpgEspace.png',
+'assets/UncpgAdherent.png'
+]
+)">
 
-    <!-- PROJET 2 -->
-    <div class="featured-project-card"
-    onclick="openModal(
-    'Plateforme de musique',
-    'Projet fullstack avec Vue.js pour le front-end, Java pour le back-end. Base de données MySQL et gestion du projet via GitHub.',
-    ['Vue.js','Java','MySQL','GitHub']
-    )">
-        <img src="assets/VIBZ.png" class="project-img">
-        <div class="project-overlay"></div>
+    <img src="assets/UNCPG03.png" class="project-img">
+    <div class="project-overlay"></div>
 
-        <div class="featured-project-content">
-            <span class="project-type">Projet Fullstack</span>
-            <h3>Plateforme de musique</h3>
-            <p>Application d’écoute de musique fullstack.</p>
-
-            <div class="skill-tags">
-                <span>Vue.js</span>
-                <span>Java</span>
-                <span>MySQL</span>
-                <span>GitHub</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROJET 3 -->
-    <div class="featured-project-card"
-    onclick="openModal(
-    'Gestion des sportifs',
-    'Application Windows en C# permettant la gestion de sportifs (ajout, modification, suppression, recherche) avec base de données SQL.',
-    ['C#','.NET','SQL','WinForms']
-    )">
-        <img src="assets/Sport.png" class="project-img">
-        <div class="project-overlay"></div>
-
-        <div class="featured-project-content">
-            <span class="project-type">Application Desktop</span>
-            <h3>Gestion des sportifs</h3>
-            <p>Application Windows en C# avec base de données SQL.</p>
-
-            <div class="skill-tags">
-                <span>C#</span>
-                <span>.NET</span>
-                <span>SQL</span>
-                <span>WinForms</span>
-            </div>
-        </div>
+    <div class="featured-project-content">
+        <span class="project-type">Stage</span>
+        <h3>ADCPG 03</h3>
+        <p>Stage WordPress complet.</p>
     </div>
 
 </div>
+
+        <!-- PROJET 2 -->
+        <div class="featured-project-card"
+        onclick="openModal('Musique','Vue.js + Java + MySQL',['Vue.js','Java','MySQL','GitHub'])">
+
+            <img src="assets/VIBZ.png" class="project-img">
+            <div class="project-overlay"></div>
+
+            <div class="featured-project-content">
+                <span class="project-type">Fullstack</span>
+                <h3>Plateforme musique</h3>
+                <p>Ste d'écoute de musique.</p>
+            </div>
+        </div>
+
+        <!-- PROJET 3 -->
+        <div class="featured-project-card"
+        onclick="openModal('Sportifs','C# + SQL',['C#','SQL','WinForms'])">
+
+            <img src="assets/Sport.png" class="project-img">
+            <div class="project-overlay"></div>
+
+            <div class="featured-project-content">
+                <span class="project-type">Desktop</span>
+                <h3>Gestion sportifs</h3>
+                <p>Application C# avec base de données.</p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- AUTRES PROJETS -->
@@ -358,52 +345,55 @@
 
     <div class="skills-header">
         <p class="badge-tech">AUTRES PROJETS</p>
-        <h2>Exploration & Expériences</h2>
+        <h2>Mes réalisations</h2>
+        <p class="skills-subtitle">
+            Quelques projets supplémentaires réalisés durant ma formation.
+        </p>
     </div>
 
     <div class="slider-wrapper">
 
-    <button class="slider-btn left" onclick="scrollSlider(-1)">‹</button>
+    <button class="slider-btn left" onclick="scrollProjects(-1)">&#10094;</button>
 
     <div class="projects-slider" id="projectsSlider">
 
-        <!-- TES CARDS ICI -->
         <div class="mini-project-card">
             <h3>GLPI</h3>
-            <p>Description...</p>
-        </div>
-
-        <div class="mini-project-card">
-            <h3>Application calcul</h3>
-            <p>Description...</p>
-        </div>
-
-        <div class="mini-project-card">
-            <h3>CSS Zen Garden</h3>
-            <p>Description...</p>
-        </div>
-        <div class="mini-project-card">
-            <h3>Site publicitaire</h3>
-            <p>Description...</p>
-        </div>
-
-        <div class="mini-project-card">
-            <h3>Veille technologique - Journal</h3>
-            <p>Description...</p>
+            <p>Déploiement et administration de GLPI pour la gestion du parc informatique et des tickets utilisateurs.</p>
         </div>
 
         <div class="mini-project-card">
             <h3>Application Jeux</h3>
-            <p>Description...</p>
+            <p>Application C# regroupant Morpion, Pendu et Mastermind avec gestion des événements et interfaces.</p>
         </div>
-        
+
+        <div class="mini-project-card">
+            <h3>Application Calcul</h3>
+            <p>Application éducative en C# pour apprendre les opérations de base aux élèves du primaire.</p>
+        </div>
+
+        <div class="mini-project-card">
+            <h3>Journal “Le Canard Connecté”</h3>
+            <p>Rédaction d'articles et veille technologique hebdomadaire sur les innovations numériques.</p>
+        </div>
+
+        <div class="mini-project-card">
+            <h3>CSS Zen Garden</h3>
+            <p>Création d'un design CSS complet sans modifier le HTML.</p>
+        </div>
+
+        <div class="mini-project-card">
+            <h3>Site HTML Pub</h3>
+            <p>Site one-page interactif avec présentation d'un produit fictif.</p>
+        </div>
+
     </div>
 
-    <button class="slider-btn right" onclick="scrollSlider(1)">›</button>
+    <button class="slider-btn right" onclick="scrollProjects(1)">&#10095;</button>
 
 </div>
-
 </section>
+
 <div id="projectModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">×</span>
@@ -414,6 +404,31 @@
         <div id="modalTags" class="modal-tags"></div>
     </div>
 </div>
+
+<section class="contact-title">
+    CONTACTEZ MOI
+</section>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <h3>Keyrian LY</h3>
+            <p>Tous droits réservés © 2026</p>
+        </div>
+
+        <div class="footer-right">
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kly.sio2310@gmail.com" class="footer-icon">✉️</a>
+
+            <a href="https://www.linkedin.com/in/keyrian-ly" target="_blank" class="footer-icon"></a>
+
+        </div>
+
+    </div>
+
+</footer>
 
 <script src="script.js"></script>
 </body>
