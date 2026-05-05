@@ -381,13 +381,24 @@
 
 <div id="projectModal" class="modal">
     <div class="modal-content" id="modalContent">
-        <span class="close-btn" onclick="closeModal()">×</span>
 
-        <h2 id="modalTitle">Titre</h2>
-        <p id="modalDesc">Description</p>
+    <span class="close-btn" onclick="closeModal()">×</span>
 
-        <div id="modalTags" class="modal-tags"></div>
+    <div class="modal-layout">
+
+        <!-- GAUCHE -->
+        <div class="modal-left">
+            <h2 id="modalTitle">Titre</h2>
+            <p id="modalDesc">Description</p>
+            <div id="modalTags" class="modal-tags"></div>
+        </div>
+
+        <!-- DROITE -->
+        <div class="modal-right" id="modalImages"></div>
+
     </div>
+
+</div>
 </div>
 
 <section class="contact-title">

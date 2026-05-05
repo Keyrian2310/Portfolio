@@ -22,57 +22,35 @@ cards.forEach(card => {
     });
 });
 function openModal(id) {
-
-    const modal = document.getElementById("projectModal");
-    const content = document.getElementById("modalContent");
-
     const project = projects[id];
 
-    modal.style.display = "flex";
+    document.getElementById("modalTitle").innerText = project.title;
 
-    content.innerHTML = `
-        <span class="close-btn" onclick="closeModal()">×</span>
-
-        <div class="modal-layout">
-
-            <div class="modal-left">
-
-                <h2>${project.title}</h2>
-
-                <div class="modal-block">
-                    <h4>Contexte</h4>
-                    <p>${project.content.contexte}</p>
-                </div>
-
-                <div class="modal-block">
-                    <h4>Objectifs</h4>
-                    <p>${project.content.objectifs}</p>
-                </div>
-
-                <div class="modal-block">
-                    <h4>Points de réalisation</h4>
-                    <ul>
-                        ${project.content.realisations.map(r => `<li>${r}</li>`).join("")}
-                    </ul>
-                </div>
-
-                <div class="modal-block">
-                    <h4>Difficultés</h4>
-                    <p>${project.content.difficulte}</p>
-                </div>
-
-                <div class="modal-tags">
-                    ${project.tags.map(t => `<span>${t}</span>`).join("")}
-                </div>
-
-            </div>
-
-            <div class="modal-right">
-                ${project.images.map(img => `<img src="${img}">`).join("")}
-            </div>
-
-        </div>
+    document.getElementById("modalDesc").innerHTML = `
+        <strong>Contexte :</strong> ${project.content.contexte}<br><br>
+        <strong>Objectifs :</strong> ${project.content.objectifs}<br><br>
+        <strong>Réalisations :</strong>
+        <ul>
+            ${project.content.realisations.map(r => `<li>${r}</li>`).join("")}
+        </ul>
+        <br>
+        <strong>Difficultés :</strong> ${project.content.difficulte || "Non précisé"}
     `;
+
+    // LIEN (PROPRE + CONDITIONNEL)
+    if (project.content.lien) {
+        document.getElementById("modalDesc").innerHTML += `
+            <br><br><a href="${project.content.lien}" target="_blank">🔗 Voir le site</a>
+        `;
+    }
+
+    document.getElementById("modalTags").innerHTML =
+        project.tags.map(t => `<span>${t}</span>`).join("");
+
+    document.getElementById("modalImages").innerHTML =
+        project.images.map(img => `<img src="${img}">`).join("");
+
+    document.getElementById("projectModal").style.display = "flex";
 }
 
 function closeModal() {
@@ -112,8 +90,11 @@ const projects = {
                 "Menu responsive mobile",
                 "Module de don interactif",
                 "Déploiement FTP via FileZilla"
+                
             ],
-            difficulte: "Gestion du CSS responsive et déploiement FTP via Filezilla."
+            difficulte: "Gestion du CSS responsive et déploiement FTP via Filezilla.",
+
+             lien: "https://adcpg03.free.nf"
         },
         tags: ["WordPress", "PHP", "JS", "FTP"]
     },
@@ -129,7 +110,9 @@ const projects = {
                 "Backend Java",
                 "Base de données MySQL"
             ],
-            difficulte: "Connexion API entre front et back."
+            difficulte: "Connexion API entre front et back.",
+
+            lien: "https://vibz-music.netlify.app"
         },
         tags: ["Vue.js", "Java", "MySQL"]
     },
@@ -155,3 +138,11 @@ const projects = {
         tags: ["C#", "SQL", "WinForms"]
     }
 };
+
+if (project.content.lien) {
+    html += `
+        <a href="${project.content.lien}" target="_blank" class="project-link">
+            Voir le projet →
+        </a>
+    `;
+}
