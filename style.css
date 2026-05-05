@@ -617,11 +617,12 @@ h1 {
 
 .skill-tags span:hover::before{
     left:120%;
+}
 
 /* ========================= */
 /* Projects */
 /* ========================= */
-}
+
 .projects-section{
     max-width:1200px;
     margin:100px auto;
@@ -703,17 +704,6 @@ h1 {
     color:#b6bdd1;
     margin-bottom:8px;
     font-size:0.9rem;
-}
-
-.projects-slider{
-    display:flex;
-    gap:20px;
-
-    overflow-x:auto;
-    scroll-behavior:smooth;
-
-    padding:20px 5px;
-    margin-top:40px;
 }
 
 .projects-slider::-webkit-scrollbar{
@@ -871,43 +861,6 @@ h1 {
 .featured-project-content p{
     color:#b6bdd1;
     line-height:1.6;
-}
-
-/* =========================
-   TAGS TECHNOS
-========================= */
-
-.skill-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-
-    margin-top:15px;
-}
-
-.skill-tags span{
-    padding:8px 14px;
-
-    font-size:0.75rem;
-    font-weight:700;
-
-    border-radius:12px;
-
-    background:rgba(10,10,14,0.6);
-
-    border:1px solid rgba(173,181,215,0.18);
-
-    color:#e8e8ff;
-
-    transition:0.3s ease;
-}
-
-.skill-tags span:hover{
-    transform:translateY(-2px);
-
-    border-color:rgba(124,92,255,0.4);
-
-    box-shadow:0 0 15px rgba(124,92,255,0.2);
 }
 
 /* =========================
@@ -1228,6 +1181,7 @@ h1 {
     object-fit:contain;
 }
 
+/* Lien projet */
 .project-link{
     display:inline-block;
     margin-top:20px;
@@ -1250,6 +1204,8 @@ h1 {
     box-shadow:0 0 20px rgba(124,92,255,0.3);
     border-color:rgba(124,92,255,0.6);
 }
+
+/* Images zoom / cliquable */
 
 .lightbox {
     display: none;
