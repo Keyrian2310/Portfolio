@@ -48,7 +48,7 @@ function openModal(id) {
         project.tags.map(t => `<span>${t}</span>`).join("");
 
     document.getElementById("modalImages").innerHTML =
-        project.images.map(img => `<img src="${img}">`).join("");
+        project.images.map(img => `<img src="${img}" onclick="openImage('${img}')">`).join("");
 
     document.getElementById("projectModal").style.display = "flex";
 }
@@ -145,4 +145,16 @@ if (project.content.lien) {
             Voir le projet →
         </a>
     `;
+}
+
+function openImage(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightboxImg");
+
+    img.src = src;
+    lightbox.style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
 }
